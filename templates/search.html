@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Wyszukaj Pozycję</h2>
+<form method="POST">
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+    <label for="street">Ulica:</label>
+    <input type="text" id="street" name="street" required>
+
+    <label for="house_number">Numer domu:</label>
+    <input type="text" id="house_number" name="house_number" required>
+
+    <button type="submit">Szukaj</button>
+</form>
+{% endblock %}
